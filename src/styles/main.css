@@ -1,0 +1,228 @@
+@import "bootstrap-icons/font/bootstrap-icons";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    height: 100%;
+    background-color: #202020 !important;
+    font-family: "Roboto", sans-serif;
+}
+
+.form-control, .form-control:focus{
+    background-color: #202020;
+    border: 1px solid #303030;
+    color: #f9f9f9;
+}
+
+.form-control:focus{
+    border-color: rgb(186, 32, 32);
+    box-shadow: 0px 0px 4px 1px rgb(186, 32, 32);
+}
+
+.btn-danger{
+    background-color: rgb(186, 32, 32) !important;
+    border: rgb(211, 37, 37);
+}
+
+.form-control::placeholder{
+    color: rgb(148, 147, 147);
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.icon-play img{
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    opacity: 0;
+    transition: ease-in-out 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.navbar{
+    padding: 4px;
+    background-color: #282828;
+}
+
+.toast{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    z-index: 2000;
+}
+
+.btnAddFavorite{
+    cursor: pointer;
+}
+
+.card-movie{
+    position: relative !important;
+    border-radius: 7px;
+    z-index: 4;
+}
+
+.card-movie img{    
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+h1{
+    font-size: 1.8em;
+    color: #f9f9f9;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: ease-in 0.2s;
+    border-radius: 7px;
+}
+
+.card-movie:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-movie:hover .date, .card-movie:hover .icon-play img{
+    opacity: 1;
+}
+
+footer{
+    background-color: #282828;
+    padding: 15px;
+}
+
+.backdrop{
+    position: relative;
+}
+
+.backdrop img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 7px;
+}
+
+.backdrop .info{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 3;
+}
+
+.backdrop .info h2{
+    color: #f9f9f9;
+    font-size: 1.8em;
+}
+
+.info .sinopse{
+    color: #cecece;
+    font-size: 1.2em;
+}
+
+.genres{
+    font-size: 1.2em;
+    color: #f9f9f9;
+    font-weight: 500;
+}
+
+.infos{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.card-movie .date{
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    z-index: 0;
+    margin: 12px;
+    font-weight: 500;
+    transition: ease-in 0.2s;
+}
+
+.date{
+    color: #f9f9f9;
+}
+
+.vote{
+    color: #ffd700;
+}
+
+.overlay-backdrop{
+    z-index: 2;
+    background: linear-gradient(to right, rgba(32, 32, 32, 1), rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0));
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.posters{
+    position: relative;
+}
+
+.posters-list{
+    position: absolute;
+    height: auto;
+    overflow-y: auto;
+    max-height: 200px;
+    padding: 12px;
+    width: 100%;
+    z-index: 1001;
+    background-color: #282828;
+    padding: 12px;
+    color: #f9f9f9;
+    border-radius: 7px;
+}
+
+.posters-list a{
+    display: block;
+    color: #f9f9f9;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.posters-list a:first-child{
+    border-top: none;
+}
+
+.posters-list a:hover{
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 993px){
+    .backdrop .info{
+        position: relative;
+        width: 100%;
+    }
+
+    .overlay-backdrop{
+        background: none;    
+    }
+}
