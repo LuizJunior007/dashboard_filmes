@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react"
 import Layout from "."
 import Appbar from "../Navbar";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('Layout component', () => {
 
