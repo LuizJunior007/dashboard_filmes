@@ -78,24 +78,24 @@ const Movie = ({ movie }: { movie: MovieProps }) => {
             <div className="backdrop">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="" />
                 <div className="info mt-4">
-                    <h2>{movie.title}</h2>
+                    <h2 id="movieTitle">{movie.title}</h2>
 
-                    <div className="sinopse mt-4">
+                    <div className="sinopse mt-4" id="overview">
                         {movie.overview}
                     </div>
 
                     <div className="mt-4">
-                        <div className="genres">
+                        <div className="genres" id="genres">
                             {movie.genres.map((g, i) => {
                                 return <span key={i}>{g.name} {i + 1 !== movie.genres.length ? ' | ' : ''} </span>
                             })}
                         </div>
 
                         <div className="infos mt-4">
-                            <span className="date"><i className="bi bi-calendar"></i> {getFullYear(movie.release_date)} | </span>
+                            <span className="date" id="date"><i className="bi bi-calendar"></i> {getFullYear(movie.release_date)} | </span>
                             <span className="vote"><i className="bi bi-star-half"></i> {movie.vote_average.toFixed(1)}</span>
                             <span className="text-light"> | </span>
-                            <span className="btnAddFavorite" onClick={ handleAddFavorite } title={`${favoriteId !== undefined ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}`}>
+                            <span className="btnAddFavorite" id="btnAddFavorite" onClick={ handleAddFavorite } title={`${favoriteId !== undefined ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}`}>
                                 {
                                     favoriteId === movie.id
                                     ?

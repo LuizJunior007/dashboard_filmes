@@ -10,12 +10,11 @@ describe('Layout component', () => {
         render(
             <BrowserRouter>
                 <Layout>
+                    <Appbar />
 
-                <Appbar />
-
-                <div>
-                    Hello world
-                </div>
+                    <div>
+                        Hello world
+                    </div>
                 </Layout>
             </BrowserRouter>
         );
