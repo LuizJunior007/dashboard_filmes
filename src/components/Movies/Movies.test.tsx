@@ -28,7 +28,7 @@ describe('Movies component', () => {
         const movieEl = document.getElementById('card-movie');
         expect(movieEl).toBeInTheDocument();
 
-        moviesProps.forEach((m, i) => {
+        moviesProps.forEach((i) => {
 
             const movieLink = document.getElementById(`link-movie-${i}`);
             expect(movieLink).toBeInTheDocument();
