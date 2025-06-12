@@ -9,6 +9,7 @@ import MoviePage from './pages/MoviePage';
 import 'nprogress/nprogress.css';
 import RouteChangeTrack from './components/RouteChangeTrack';
 import Favorites from './pages/Favorites';
+import NotFound from './pages/NotFound';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path='/' Component={ Home } />
             <Route path='/movie/:id' Component={ MoviePage } />
             <Route path='/favorites' Component={ Favorites } />
+            <Route path='*' Component={ NotFound } />
           </Routes>
         </Layout>
       </BrowserRouter>

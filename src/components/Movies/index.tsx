@@ -24,8 +24,8 @@ const Movies = ({ movies }: MoviesProps) => {
             <Row className="g-2 mt-3">
                 { movies.map((m, i) => 
                     <Col xs="6" sm="6" md="4" lg="2" key={ i }>
-                        <Link to={`/movie/${m.id}`}>
-                            <div className="card-movie">
+                        <Link to={`/movie/${m.id}`} id={`link-movie-${i}`}>
+                            <div className="card-movie" id="card-movie">
                                 <img src={`https://media.themoviedb.org/t/p/w440_and_h660_face/${m.poster_path}`} alt="poster" />
                                 <div className="overlay"></div>
                                 <div className="date">{getFullYear(m.release_date)}</div>

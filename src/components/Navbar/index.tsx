@@ -38,7 +38,7 @@ const Appbar = () => {
         <header className="sticky-top">
             <Navbar className="navbar-dark shadow" expand="md">
                 <Container>
-                    <Link to="/" className="navbar-brand">
+                    <Link to="/" className="navbar-brand" id="logo-link">
                         <div className="logo">
                             <img src="/logo.png" alt="logo" className="me-2" />
                             { siteName }

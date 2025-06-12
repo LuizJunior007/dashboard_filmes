@@ -13,8 +13,6 @@ const RouteChangeTrack = () => {
 
         Nprogress.done();
 
-        
-
     }, [location]);
 
     return null;

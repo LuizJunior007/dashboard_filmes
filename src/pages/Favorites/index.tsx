@@ -17,7 +17,15 @@ const Favorites = () => {
     return(
         <>
             <h1>Favoritos</h1>
-            <Movies movies={ movies } />
+            {
+                movies.length === 0
+                ?
+                <div className="text-light">
+                    Nenhum filme foi encontrado.
+                </div>
+                :
+                <Movies movies={ movies } />
+            }
         </>
     );
 
